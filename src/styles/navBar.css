@@ -1,0 +1,63 @@
+.nav-header{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    z-index: 999;
+    
+}
+
+.curriculo-box{
+    display: flex;
+    align-items: center;
+    border: #713BF6 1px solid;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 8px;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.cv-icon{
+    width: 17px;
+}
+
+.logo-box{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-box p{
+    color: white;
+    font-size: 19px;
+}
+
+.logo-box img{
+    width: 35px;
+}
+
+.nav-bar{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    background-color: #070A1A;
+    align-items: center;
+    padding: 27px;
+    border-radius: 15px;
+    z-index: 999;
+}
+
+.nav-links{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    
+    
+}
+
+.nav-links li a{
+    text-decoration: none;
+    color: rgb(215, 212, 212);
+    font-size: 16px;
+}

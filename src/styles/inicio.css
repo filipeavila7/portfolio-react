@@ -1,0 +1,125 @@
+.inicio-sec {
+    padding-top:  120px;
+    padding-bottom: 100px;
+}
+
+.inicio-box{
+    padding: 0 67px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.dados-box{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+}
+
+.dev{
+    width: 220px;
+    padding: 5px;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #141037 0%, hwb(270 24% 0% / 0.385) 100%);
+}
+.dev p{
+    color: #c25afa;
+}
+.descricao{
+    max-width: 500px;
+    width: 100%;
+    
+}
+
+.redes-box{
+    display: flex;
+    color: rgb(255, 255, 255);
+    gap: 10px;
+    font-size: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.redes-box i{
+    cursor: pointer;
+}
+
+.redes-lay{
+    background-color: rgba(70, 82, 93, 0.505);
+    padding: 8px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12),
+            0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+
+.dados-box h1{
+    color: white;
+    font-size: 70px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.dados-box span{
+    color: #713BF6;
+}
+
+
+.botao-box{
+    width: 400px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-icon{
+    width: 17px;
+}
+
+.btn-projetos{
+    width: 100%;
+    color: white;
+    border-radius: 10px;
+    justify-content: center;
+    gap: 15px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12),
+            0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    background: linear-gradient(145deg, #713BF6 0%, hsl(270, 100%, 62%) 100%);
+}
+
+.btn-contato{
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12),
+            0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 10px;
+    background-color: #46525d81;
+}
+
+
+.img-inicio-box{
+    width: 300px;
+    height: 300px;
+}
+
+.img-inicio-box img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 150px;
+}

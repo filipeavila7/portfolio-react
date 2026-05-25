@@ -1,0 +1,26 @@
+.app-inicio-lay{
+  padding: 0 100px;
+  background: url("/fundo.png") center/cover no-repeat;
+    background-attachment: fixed;
+    position: relative;
+  
+}
+
+.overlay{
+   position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(7px);
+    /* Aplica o desfoque só no fundo */
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 0;
+    /* Fica atrás do conteúdo */
+    pointer-events: none;
+    /* Não interfere nos cliques */
+}
+
+.app-lay{
+  padding: 0 100px;
+}

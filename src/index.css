@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Fredoka", sans-serif;
+  
+}
+
+p{
+  font-family: "Fredoka", sans-serif;
+  color: white;
+}
+
+body{
+  background-color: #141724;
+}
+
+ /* #713BF6 */
+
+ /* largura da barra */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 7px;
+  
+  
+}
+
+/* fundo da barra */
+::-webkit-scrollbar-track {
+  background: #1e1e2f;
+}
+
+/* parte que você arrasta */
+::-webkit-scrollbar-thumb {
+  background-color: #32185e ;
+  border-radius: 10px;
+  cursor: pointer;
+  
+}
+
+/* hover */
+::-webkit-scrollbar-thumb:hover {
+ background-color: #713BF6;
+}
+
+
+/* background: radial-gradient(circle at top right, rgba(113, 59, 246, 0.22), transparent 38%), linear-gradient(160deg, #101427 0%, #090b15 100%); */
