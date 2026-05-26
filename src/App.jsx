@@ -6,8 +6,10 @@ import "./styles/tec.css";
 import "./styles/form.css";
 import "./styles/cert.css";
 import "./styles/proj.css";
+import "./styles/contato.css";
+import { useState } from "react";
 import NavBar from "./components/layout/NavBar";
-import { FaGithub, FaDocker, FaCss3, FaFigma, FaBootstrap, FaHtml5, FaGitAlt, FaJava, FaPython, FaReact, FaGraduationCap, FaAward } from "react-icons/fa";
+import { FaCode, FaLaptopCode, FaGlobe, FaClock, FaGithub, FaFolder, FaDocker, FaCss3, FaFigma, FaBootstrap, FaHtml5, FaGitAlt, FaJava, FaPython, FaReact, FaGraduationCap, FaAward, FaLinkedin, FaEnvelope, FaWhatsapp } from "react-icons/fa";
 import { SiVite, SiFastapi, SiTypescript, SiJavascript, SiSpringsecurity, SiMysql, SiSpringboot, SiFlask } from "react-icons/si";
 import { projetos } from "./service/projetos";
 import CardProj from "./components/CardProj";
@@ -16,6 +18,57 @@ function App() {
   function abrirProjeto(projeto) {
     console.log(projeto)
   }
+
+  const [filtro, setFiltro] = useState("TODOS");
+
+
+  const projetosFiltrados = projetos.filter((projeto) => {
+
+    if (filtro === "TODOS") {
+      return true;
+    }
+
+    return projeto.tipo === filtro;
+  });
+
+  const contatos = [
+    {
+      titulo: "LinkedIn",
+      descricao: "Para networking, oportunidades e conversas profissionais.",
+      acao: "Abrir perfil",
+      valor: "linkedin.com/in/seu-perfil",
+      href: "#",
+      destaque: false,
+      icone: <FaLinkedin />
+    },
+    {
+      titulo: "E-mail",
+      descricao: "Melhor canal para propostas, freelance ou contato direto.",
+      acao: "Enviar e-mail",
+      valor: "seuemail@exemplo.com",
+      href: "mailto:seuemail@exemplo.com",
+      destaque: true,
+      icone: <FaEnvelope />
+    },
+    {
+      titulo: "GitHub",
+      descricao: "Aqui voce pode acompanhar meus projetos e meu codigo.",
+      acao: "Ver GitHub",
+      valor: "github.com/seu-usuario",
+      href: "#",
+      destaque: false,
+      icone: <FaGithub />
+    },
+    {
+      titulo: "WhatsApp",
+      descricao: "Contato rapido para conversas objetivas e alinhamentos.",
+      acao: "Chamar no WhatsApp",
+      valor: "(00) 00000-0000",
+      href: "#",
+      destaque: false,
+      icone: <FaWhatsapp />
+    }
+  ];
 
 
   return (
@@ -381,19 +434,90 @@ function App() {
 
         <section className="proj-sec">
           <div className="proj-header">
-            <p className="proj-tag"></p>
+            <p className="proj-tag">NA PRÁTICA</p>
             <h2>Meus <span>Projetos</span> </h2>
 
+
             <p className="proj-intro">Meus projetos práticos</p>
+
+            <div className="filtro-box">
+              <div onClick={() => setFiltro("TODOS")}
+                className={`filtro ${filtro === "TODOS" ? "active" : ""}`}>
+                <FaFolder className={`filtro-icon ${filtro === "TODOS" ? "active" : ""}`} />
+                <p>Todos</p>
+              </div>
+              <div onClick={() => setFiltro("API")} 
+              className={`filtro ${filtro === "API" ? "active" : ""}`}>
+                <FaCode className={`filtro-icon ${filtro === "API" ? "active" : ""}`} />
+                <p>Api</p>
+              </div>
+              <div onClick={() => setFiltro("FULL")} 
+              className={`filtro ${filtro === "FULL" ? "active" : ""}`}>
+                <FaLaptopCode className={`filtro-icon ${filtro === "FULL" ? "active" : ""}`} />
+                <p>Full</p>
+              </div>
+              <div onClick={() => setFiltro("PAGINA")} 
+              className={`filtro ${filtro === "PAGINA" ? "active" : ""}`}>
+                <FaGlobe className={`filtro-icon ${filtro === "PAGINA" ? "active" : ""}`} />
+                <p>Páginas</p>
+              </div>
+              <div onClick={() => setFiltro("ANDAMENTO")} 
+              className={`filtro ${filtro === "ANDAMENTO" ? "active" : ""}`}>
+                <FaClock className={`filtro-icon ${filtro === "ANDAMENTO" ? "active" : ""}`} />
+                <p>Em andamento</p>
+              </div>
+
+            </div>
           </div>
 
+
           <div className="proj-box">
-            {projetos.map((projeto, index) => (
+            {projetosFiltrados.map((projeto, index) => (
               <CardProj
                 key={index}
                 projeto={projeto}
                 onClick={abrirProjeto}
               />
+            ))}
+          </div>
+        </section>
+
+        <section className="contato-sec">
+          <div className="contato-header">
+            <p className="contato-tag">VAMOS CONVERSAR</p>
+            <h2>
+              Entre em <span>contato</span>
+            </h2>
+            <p className="contato-intro">
+              Se quiser conversar sobre projetos, oportunidade de estagio,
+              freelance ou tecnologia, estes sao os canais mais rapidos para me
+              encontrar.
+            </p>
+          </div>
+
+          <div className="contato-box">
+            {contatos.map((contato, index) => (
+              <article
+                key={index}
+                className={`contato-card ${contato.destaque ? "contato-card-destaque" : ""}`}
+              >
+                <div className="contato-card-top">
+                  <div className="contato-icon">
+                    {contato.icone}
+                  </div>
+                  {contato.destaque && (
+                    <span className="contato-badge">Canal principal</span>
+                  )}
+                </div>
+
+                <h3>{contato.titulo}</h3>
+                <p className="contato-desc">{contato.descricao}</p>
+                <p className="contato-valor">{contato.valor}</p>
+
+                <a href={contato.href} className="contato-link">
+                  {contato.acao}
+                </a>
+              </article>
             ))}
           </div>
         </section>
