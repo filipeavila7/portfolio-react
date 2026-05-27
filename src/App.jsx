@@ -7,19 +7,87 @@ import "./styles/form.css";
 import "./styles/cert.css";
 import "./styles/proj.css";
 import "./styles/contato.css";
-import { useState } from "react";
+import "./styles/footer.css";
+import { useEffect, useState } from "react";
+import Footer from "./components/layout/Footer";
 import NavBar from "./components/layout/NavBar";
 import { FaCode, FaLaptopCode, FaGlobe, FaClock, FaGithub, FaFolder, FaDocker, FaCss3, FaFigma, FaBootstrap, FaHtml5, FaGitAlt, FaJava, FaPython, FaReact, FaGraduationCap, FaAward, FaLinkedin, FaEnvelope, FaWhatsapp } from "react-icons/fa";
 import { SiVite, SiFastapi, SiTypescript, SiJavascript, SiSpringsecurity, SiMysql, SiSpringboot, SiFlask } from "react-icons/si";
 import { projetos } from "./service/projetos";
 import CardProj from "./components/CardProj";
+import ProjectModal from "./components/ProjectModal";
 
 function App() {
-  function abrirProjeto(projeto) {
-    console.log(projeto)
+  const [secaoAtiva, setSecaoAtiva] = useState("inicio");
+  const [filtro, setFiltro] = useState("TODOS");
+  const [modalProjeto, setModalProjeto] = useState(null);
+  const [tipoModalProjeto, setTipoModalProjeto] = useState("detalhes");
+
+  useEffect(() => {
+    const secoes = [
+      "inicio",
+      "sobre",
+      "tecnologias",
+      "formacoes",
+      "certificados",
+      "projetos",
+      "contato",
+    ];
+
+    function atualizarSecaoAtiva() {
+      const posicaoBase = window.scrollY + 180;
+
+      for (let index = secoes.length - 1; index >= 0; index -= 1) {
+        const secao = document.getElementById(secoes[index]);
+
+        if (secao && posicaoBase >= secao.offsetTop) {
+          setSecaoAtiva(secoes[index]);
+          return;
+        }
+      }
+
+      setSecaoAtiva("inicio");
+    }
+
+    atualizarSecaoAtiva();
+    window.addEventListener("scroll", atualizarSecaoAtiva);
+
+    return () => {
+      window.removeEventListener("scroll", atualizarSecaoAtiva);
+    };
+  }, []);
+
+  function normalizarLinks(valorPadrao, lista, labelPadrao, descricaoPadrao) {
+    if (Array.isArray(lista) && lista.length > 0) {
+      return lista;
+    }
+
+    if (valorPadrao) {
+      return [
+        {
+          label: labelPadrao,
+          descricao: descricaoPadrao,
+          href: valorPadrao,
+        },
+      ];
+    }
+
+    return [];
   }
 
-  const [filtro, setFiltro] = useState("TODOS");
+  function abrirProjeto(projeto) {
+    setModalProjeto(projeto);
+    setTipoModalProjeto("detalhes");
+  }
+
+  function abrirGithub(projeto) {
+    setModalProjeto(projeto);
+    setTipoModalProjeto("github");
+  }
+
+  function fecharModalProjeto() {
+    setModalProjeto(null);
+  }
 
 
   const projetosFiltrados = projetos.filter((projeto) => {
@@ -31,13 +99,31 @@ function App() {
     return projeto.tipo === filtro;
   });
 
+  const projetoSelecionado = modalProjeto
+    ? {
+      ...modalProjeto,
+      linksProjeto: normalizarLinks(
+        modalProjeto.linkProjeto,
+        modalProjeto.linksProjeto,
+        "Abrir projeto",
+        "Visualizar deploy ou demonstracao"
+      ),
+      linksGit: normalizarLinks(
+        modalProjeto.linkGit,
+        modalProjeto.linksGit,
+        "Abrir repositorio",
+        "Codigo-fonte do projeto"
+      ),
+    }
+    : null;
+
   const contatos = [
     {
       titulo: "LinkedIn",
       descricao: "Para networking, oportunidades e conversas profissionais.",
       acao: "Abrir perfil",
-      valor: "linkedin.com/in/seu-perfil",
-      href: "#",
+      valor: "https://www.linkedin.com/in/filipe-pereira-ab843530a",
+      href: "https://www.linkedin.com/in/filipe-pereira-ab843530a",
       destaque: false,
       icone: <FaLinkedin />
     },
@@ -45,8 +131,8 @@ function App() {
       titulo: "E-mail",
       descricao: "Melhor canal para propostas, freelance ou contato direto.",
       acao: "Enviar e-mail",
-      valor: "seuemail@exemplo.com",
-      href: "mailto:seuemail@exemplo.com",
+      valor: "filipeavila076@gmail.com",
+      href: "https://mail.google.com/mail/?view=cm&fs=1&to=filipeavila076@gmail.com",
       destaque: true,
       icone: <FaEnvelope />
     },
@@ -54,8 +140,8 @@ function App() {
       titulo: "GitHub",
       descricao: "Aqui voce pode acompanhar meus projetos e meu codigo.",
       acao: "Ver GitHub",
-      valor: "github.com/seu-usuario",
-      href: "#",
+      valor: "https://github.com/filipeavila7",
+      href: "https://github.com/filipeavila7",
       destaque: false,
       icone: <FaGithub />
     },
@@ -63,8 +149,8 @@ function App() {
       titulo: "WhatsApp",
       descricao: "Contato rapido para conversas objetivas e alinhamentos.",
       acao: "Chamar no WhatsApp",
-      valor: "(00) 00000-0000",
-      href: "#",
+      valor: "55 (61) 98418-8269",
+      href: "https://wa.me/5561984188269",
       destaque: false,
       icone: <FaWhatsapp />
     }
@@ -75,8 +161,8 @@ function App() {
     <>
       <div className="app-inicio-lay">
         <div className="overlay"></div>
-        <NavBar />
-        <section className="inicio-sec">
+        <NavBar secaoAtiva={secaoAtiva} />
+        <section id="inicio" className="inicio-sec">
           <div className="inicio-box">
             <div className="dados-box">
               <div className="dev">
@@ -119,7 +205,7 @@ function App() {
       </div>
 
       <main className="app-lay">
-        <section className="sobre-sec">
+        <section id="sobre" className="sobre-sec">
           <div className="sobre-box">
             <div className="sobre-content sobre-principal">
 
@@ -171,7 +257,7 @@ function App() {
             </div>
           </div>
         </section>
-        <section className="tec-sec">
+        <section id="tecnologias" className="tec-sec">
           <div className="tec-box">
             <h2>Tecnologias</h2>
             <div className="tec-lay">
@@ -301,7 +387,7 @@ function App() {
           </div>
 
         </section>
-        <section className="form-sec">
+        <section id="formacoes" className="form-sec">
           <div className="form-box">
             <div className="form-header">
               <p className="form-tag">MINHA JORNADA</p>
@@ -344,7 +430,7 @@ function App() {
 
           </div>
         </section>
-        <section className="cert-sec">
+        <section id="certificados" className="cert-sec">
           <div className="cert-header">
             <p className="cert-tag">APRENDIZADO CONTINUO</p>
             <h2>Certificados</h2>
@@ -432,7 +518,7 @@ function App() {
           </div>
         </section>
 
-        <section className="proj-sec">
+        <section id="projetos" className="proj-sec">
           <div className="proj-header">
             <p className="proj-tag">NA PRÁTICA</p>
             <h2>Meus <span>Projetos</span> </h2>
@@ -476,13 +562,14 @@ function App() {
               <CardProj
                 key={index}
                 projeto={projeto}
-                onClick={abrirProjeto}
+                onOpenProject={abrirProjeto}
+                onOpenGithub={abrirGithub}
               />
             ))}
           </div>
         </section>
 
-        <section className="contato-sec">
+        <section id="contato" className="contato-sec">
           <div className="contato-header">
             <p className="contato-tag">VAMOS CONVERSAR</p>
             <h2>
@@ -521,7 +608,32 @@ function App() {
             ))}
           </div>
         </section>
+
+        <ProjectModal
+          aberto={Boolean(projetoSelecionado)}
+          tipo={tipoModalProjeto}
+          titulo={projetoSelecionado?.titulo}
+          subtitulo={
+            tipoModalProjeto === "github"
+              ? "Escolha o repositorio"
+              : projetoSelecionado?.tipo
+          }
+          descricao={
+            tipoModalProjeto === "github"
+              ? "Alguns projetos podem ter mais de um link. Escolha qual repositorio voce quer abrir."
+              : projetoSelecionado?.descricaoDetalhada
+          }
+          imagem={projetoSelecionado?.imagem}
+          tags={tipoModalProjeto === "github" ? [] : projetoSelecionado?.tags}
+          links={
+            tipoModalProjeto === "github"
+              ? projetoSelecionado?.linksGit || []
+              : projetoSelecionado?.linksProjeto || []
+          }
+          onClose={fecharModalProjeto}
+        />
       </main>
+      <Footer />
     </>
   );
 }

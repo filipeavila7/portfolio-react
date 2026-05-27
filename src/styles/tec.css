@@ -50,6 +50,13 @@
     align-items: center;
     flex-direction: column;
     gap: 8px;
+    transition: 
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.tec-content:hover{
+    transform: translateY(-10px) scale(1.05);
 }
 
 .tec-content p {

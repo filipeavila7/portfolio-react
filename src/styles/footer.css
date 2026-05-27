@@ -1,0 +1,123 @@
+.footer {
+    margin: 0;
+    padding: 24px 100px 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background:
+        radial-gradient(circle at top right, rgba(113, 59, 246, 0.14), transparent 30%),
+        #0b0f1d;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr auto;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo img {
+    width: 30px;
+}
+
+.footer-logo p {
+    color: white;
+    font-size: 18px;
+}
+
+.footer-text {
+    max-width: 420px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.footer-links a,
+.footer-bottom a {
+    color: rgba(255, 255, 255, 0.76);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover,
+.footer-bottom a:hover {
+    color: #cdb8ff;
+}
+
+.footer-social {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social-link {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-social-link:hover {
+    background: rgba(113, 59, 246, 0.18);
+    border-color: rgba(139, 92, 255, 0.38);
+}
+
+.footer-bottom {
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.62);
+    font-size: 14px;
+}
+
+@media (max-width: 980px) {
+    .footer {
+        padding: 22px 24px 18px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 640px) {
+    .footer {
+        padding: 20px 20px 16px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

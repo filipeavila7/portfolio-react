@@ -2,7 +2,7 @@ import React from 'react'
 import "../styles/proj.css";
 import { FaGithub, FaLink } from "react-icons/fa";
 export default function CardProj({
-    projeto, onClick
+    projeto, onOpenProject, onOpenGithub
 }) {
     return (
         <div className="card">
@@ -29,14 +29,14 @@ export default function CardProj({
 
                 <div 
                     className="card-actions" >
-                    <div onClick={() => onClick(projeto)} className="action">
+                    <div onClick={() => onOpenProject(projeto)} className="action">
                         <FaLink className='link' />
                         <p>Ver Projeto</p>
                     </div>
-                    <a href={projeto.linkGit} className="action">
+                    <div onClick={() => onOpenGithub(projeto)} className="action">
                         <FaGithub className='link-git'/>
                         GitHub
-                    </a>
+                    </div>
                         
                     
                 </div>

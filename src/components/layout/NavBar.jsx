@@ -1,29 +1,42 @@
-import React from 'react'
-import "../../styles/navBar.css"
-export default function NavBar() {
+import "../../styles/navBar.css";
+
+const linksNavegacao = [
+  { id: "inicio", label: "Início" },
+  { id: "sobre", label: "Sobre" },
+  { id: "tecnologias", label: "Tecnologias" },
+  { id: "formacoes", label: "Formações" },
+  { id: "certificados", label: "Certificados" },
+  { id: "projetos", label: "Projetos" },
+  { id: "contato", label: "Contato" },
+];
+
+export default function NavBar({ secaoAtiva }) {
   return (
-    <header className='nav-header'>
-        <nav className="nav-bar">
-            <div className="logo-box">
-                <img src="/code.png" alt="" />
-                <p>Filipe Pereira</p>
-            </div>
-            <ul className='nav-links'>
-                <li><a href="">Início</a></li>
-                <li><a href="">Sobre</a></li>
-                <li><a href="">Tecnologias</a></li>
-                <li><a href="">Formações</a></li>
-                <li><a href="">Certificados</a></li>
-                <li><a href="">Projetos</a></li>
-                <li><a href="">Contatos</a></li>
-                <div className='curriculo-box'>
-                    <img src="/downloads.png" alt="" className="cv-icon" />
-                    <p>Download CV</p>
-                </div>
-                
-            </ul>
-            
-        </nav>
+    <header className="nav-header">
+      <nav className="nav-bar">
+        <a href="#inicio" className="logo-box">
+          <img src="/code.png" alt="" />
+          <p>Filipe Pereira</p>
+        </a>
+
+        <ul className="nav-links">
+          {linksNavegacao.map((link) => (
+            <li key={link.id}>
+              <a
+                href={`#${link.id}`}
+                className={secaoAtiva === link.id ? "nav-link-active" : ""}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+
+          <div className="curriculo-box">
+            <img src="/downloads.png" alt="" className="cv-icon" />
+            <p>Download CV</p>
+          </div>
+        </ul>
+      </nav>
     </header>
-  )
+  );
 }
