@@ -122,7 +122,7 @@ export const projetos = [
       {
         label: "Landing page",
         descricao: "Versao principal publicada",
-        href: "https://filipeavila7.github.io/projeto-front-teste/#sobre",
+        href: "https://filipeavila7.github.io/projeto-front-teste",
       },
   
     ],
@@ -131,6 +131,32 @@ export const projetos = [
         label: "Codigo principal",
         descricao: "Repositorio da landing page",
         href: "https://github.com/filipeavila7/projeto-front-teste.git",
+      },
+     
+    ],
+  },
+  {
+    titulo: "ONG Lar Amigo",
+    descricaoCurta:
+      "Página desenvolvida para uma ONG de resgate de cães e gatos, com foco em apresentar informações sobre adoção.",
+    descricaoDetalhada:
+      "Projeto desenvolvido como trabalho da faculdade para uma ONG de resgate de cães e gatos, com o objetivo de criar uma presença digital organizada e acessível para divulgação da causa animal, apresentando informações sobre adoção, resgates, formas de apoio e conscientização, utilizando uma interface intuitiva, navegação simples e uma proposta visual acolhedora voltada à conexão entre a organização e o público.",
+    imagem: "/proj11.png",
+    tags: ["Java-Script", "HTML", "CSS"],
+    tipo: "PAGINA",
+    linksProjeto: [
+      {
+        label: "Landing page",
+        descricao: "Versao principal publicada",
+        href: "",
+      },
+  
+    ],
+    linksGit: [
+      {
+        label: "Codigo principal",
+        descricao: "Repositorio da landing page",
+        href: "https://github.com/filipeavila7/ONG-Filipe-Pereira-Viana-Avila.git",
       },
      
     ],
@@ -163,34 +189,24 @@ export const projetos = [
   {
     titulo: "Site Pet Amigos",
     descricaoCurta:
-      "Site para petshop com area administrativa para gerenciamento completo de pets e produtos cadastrados",
+      "Site para petshop com área administrativa para gerenciamento completo de pets e produtos cadastrados",
     descricaoDetalhada:
-      "Projeto de sistema para petshop com foco em organizacao de produtos, cadastro de animais e gerenciamento por area administrativa.",
+      "Projeto de sistema para petshop com foco no gerenciamento de produtos, cadastro e acompanhamento de animais, além de uma área administrativa para controle de informações e organização dos processos internos, proporcionando uma experiência prática e eficiente para administração do estabelecimento.",
     imagem: "/proj7.jpeg",
     tags: ["Java-Script", "Flask"],
     tipo: "FULL",
     linksProjeto: [
       {
-        label: "Site institucional",
-        descricao: "Versao publica para clientes",
-        href: "https://seudominio.com/pet-amigos",
-      },
-      {
-        label: "Painel admin",
+        label: "Pet Amigos",
         descricao: "Area de gerenciamento do petshop",
         href: "https://admin.seudominio.com/pet-amigos",
       },
     ],
     linksGit: [
       {
-        label: "Frontend",
-        descricao: "Repositorio da interface do site",
-        href: "https://github.com/seuusuario/petamigos-front",
-      },
-      {
-        label: "Backend",
+        label: "FullStack",
         descricao: "Repositorio Flask do sistema",
-        href: "https://github.com/seuusuario/petamigos-back",
+        href: "https://github.com/filipeavila7/site-petshop.git",
       },
     ],
   },
@@ -199,18 +215,13 @@ export const projetos = [
     descricaoCurta:
       "API desenvolvida para controle de agendamentos, cortes e gerenciamento de clientes em uma barbearia.",
     descricaoDetalhada:
-      "API pensada para atender o fluxo de uma barbearia, controlando horarios, servicos, clientes e a base administrativa do negocio.",
+      "API desenvolvida como projeto do curso técnico do SENAI, pensada para atender o fluxo de uma barbearia, realizando o gerenciamento de horários, serviços, clientes e da área administrativa do negócio, com foco na organização dos processos, estruturação de dados e comunicação eficiente entre sistema e banco de dados.",
     imagem: "/proj8.jpeg",
     tags: ["Python", "Flask"],
     tipo: "API",
     linksProjeto: [
       {
-        label: "Documentacao da API",
-        descricao: "Visao geral dos endpoints",
-        href: "https://seudominio.com/api-barbearia/docs",
-      },
-      {
-        label: "Ambiente de testes",
+        label: "Api",
         descricao: "Endpoint publicado para validacoes",
         href: "https://api.seudominio.com/barbearia",
       },
@@ -219,12 +230,7 @@ export const projetos = [
       {
         label: "API principal",
         descricao: "Repositorio da API Flask",
-        href: "https://github.com/seuusuario/barbearia-api",
-      },
-      {
-        label: "Colecao de testes",
-        descricao: "Repositorio com exemplos e requests",
-        href: "https://github.com/seuusuario/barbearia-api-tests",
+        href: "https://github.com/filipeavila7/sgu.git",
       },
     ],
   },
@@ -233,7 +239,7 @@ export const projetos = [
     descricaoCurta:
       "Simples TodoList completo para mobile, utilizando o framework Flet",
     descricaoDetalhada:
-      "Aplicacao mobile de tarefas com foco em organizacao pessoal, navegacao simples e experiencia pratica com interface multiplataforma.",
+      "Aplicação mobile de gerenciamento de tarefas desenvolvida como projeto do curso técnico do SENAI e um dos meus primeiros aplicativos, utilizando Python com o framework Flet para criação da interface multiplataforma, com foco em organização pessoal, navegação simples e experiência prática no desenvolvimento de aplicações mobile integradas a interface gráfica e manipulação de dados.",
     imagem: "/proj9.jpeg",
     tags: ["Python", "Flet"],
     tipo: "FULL",
@@ -242,31 +248,22 @@ export const projetos = [
         label: "Apresentacao do app",
         descricao: "Pagina com demonstracao do projeto",
         href: "https://seudominio.com/todolist-mobile",
-      },
-      {
-        label: "Build experimental",
-        descricao: "Versao secundaria para testes",
-        href: "https://labs.seudominio.com/todolist-mobile",
-      },
+      }
     ],
     linksGit: [
       {
         label: "Aplicativo",
         descricao: "Repositorio principal em Flet",
-        href: "https://github.com/seuusuario/todolist-mobile-app",
+        href: "https://github.com/filipeavila7/todolist_final.git",
       },
-      {
-        label: "Estudos",
-        descricao: "Repositorio com testes e componentes",
-        href: "https://github.com/seuusuario/todolist-mobile-lab",
-      },
+    
     ],
   },
   {
     titulo: "Jogo da velha",
     descricaoCurta: "Simples jogo da velha com logica Java-Script",
     descricaoDetalhada:
-      "Projeto enxuto para treino de logica, validacao de jogadas e atualizacao dinamica da interface em tempo real.",
+      "Projeto enxuto para treino de lógica, validação de jogadas e atualizao dinâmica da interface em tempo real.",
     imagem: "/proj10.jpeg",
     tags: ["Java-Script"],
     tipo: "PAGINA",
@@ -276,23 +273,15 @@ export const projetos = [
         descricao: "Versao principal no navegador",
         href: "https://seudominio.com/jogo-da-velha",
       },
-      {
-        label: "Versao alternativa",
-        descricao: "Build secundaria para demonstracao",
-        href: "https://labs.seudominio.com/jogo-da-velha",
-      },
+      
     ],
     linksGit: [
       {
         label: "Codigo principal",
         descricao: "Repositorio do jogo da velha",
-        href: "https://github.com/seuusuario/jogo-da-velha-main",
+        href: "https://github.com/filipeavila7/jogo-da-velha.git",
       },
-      {
-        label: "Prototípos",
-        descricao: "Repositorio com estudos de implementacao",
-        href: "https://github.com/seuusuario/jogo-da-velha-lab",
-      },
+      
     ],
   },
 ];
