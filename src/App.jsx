@@ -187,14 +187,14 @@ function App() {
                 </div>
               </div>
               <div className="botao-box">
-                <button className="btn-projetos">
+                <a href="#projetos" className="btn-projetos">
                   Ver Projetos
                   <img className="btn-icon" src="/flecha.png" alt="" />
-                </button>
-                <button className="btn-contato">
+                </a>
+                <a href="#contato" className="btn-contato">
                   Entre em contato
                   <img className="btn-icon" src="/balao.png" alt="" />
-                </button>
+                </a>
               </div>
             </div>
             <div className="img-inicio-box">

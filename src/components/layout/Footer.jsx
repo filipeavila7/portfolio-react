@@ -21,7 +21,7 @@ const redes = [
     icone: <FaGithub />,
   },
   {
-    href: "mailto:filipeavila076@gmail.com",
+    href: "https://mail.google.com/mail/?view=cm&fs=1&to=filipeavila076@gmail.com",
     label: "E-mail",
     icone: <FaEnvelope />,
   },

@@ -31,10 +31,10 @@ export default function NavBar({ secaoAtiva }) {
             </li>
           ))}
 
-          <div className="curriculo-box">
+          <a href="/currículo-Filipe-final.pdf" download className="curriculo-box">
             <img src="/downloads.png" alt="" className="cv-icon" />
             <p>Download CV</p>
-          </div>
+          </a>
         </ul>
       </nav>
     </header>
