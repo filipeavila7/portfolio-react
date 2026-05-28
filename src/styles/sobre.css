@@ -6,7 +6,7 @@
     display: grid;
     grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
     gap: 28px;
-    padding: 0 67px;
+    padding: 0 var(--section-inner-padding);
     align-items: stretch;
 }
 
@@ -155,23 +155,28 @@
 @media (max-width: 980px) {
     .sobre-box {
         grid-template-columns: 1fr;
-        padding: 0 24px;
     }
 }
 
 @media (max-width: 640px) {
     .sobre-sec {
-        padding-bottom: 70px;
+        padding: 32px 0 56px;
+    }
+
+    .sobre-box{
+        gap: 18px;
     }
 
     .sobre-principal,
     .sobre-card {
         padding: 22px;
         border-radius: 22px;
+        height: auto;
     }
 
     .sobre-content h2 {
-        font-size: 34px;
+        font-size: 30px;
+        line-height: 1.12;
     }
 
     .sobre-content p,
@@ -185,5 +190,22 @@
 
     .sobre-destaques {
         grid-template-columns: 1fr;
+    }
+
+    .destaque-item{
+        padding: 16px;
+        gap: 14px;
+        border-radius: 16px;
+    }
+
+    .stack-grid{
+        gap: 14px;
+    }
+}
+
+@media (max-width: 380px) {
+    .sobre-principal,
+    .sobre-card {
+        padding: 18px;
     }
 }

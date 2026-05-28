@@ -1,5 +1,5 @@
 .tec-sec {
-    padding: 0 67px 30px;
+    padding: 0 var(--section-inner-padding) 30px;
 }
 
 .tec-box {
@@ -71,18 +71,23 @@
 
 @media (max-width: 980px) {
     .tec-sec {
-        padding: 0 24px 24px;
+        padding-bottom: 24px;
     }
 }
 
 @media (max-width: 640px) {
+    .tec-sec{
+        padding-bottom: 52px;
+    }
+
     .tec-box {
         padding: 22px;
         border-radius: 22px;
+        gap: 16px;
     }
 
     .tec-lay {
-        padding: 18px;
+        padding: 16px;
         border-radius: 22px;
     }
 
@@ -96,5 +101,36 @@
 
     .tec {
         font-size: 36px;
+    }
+
+    .tecs{
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .tec-content{
+        min-width: 0;
+    }
+
+    .tec-content p{
+        font-size: 14px;
+        line-height: 1.2;
+        overflow-wrap: anywhere;
+    }
+
+    .tec-content:hover{
+        transform: none;
+    }
+}
+
+@media (max-width: 380px) {
+    .tec-box,
+    .tec-lay {
+        padding: 14px;
+    }
+
+    .tecs{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }

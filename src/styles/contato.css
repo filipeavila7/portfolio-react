@@ -1,5 +1,5 @@
 .contato-sec {
-    padding: 0 67px 90px;
+    padding: 0 var(--section-inner-padding) 90px;
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -139,11 +139,16 @@
 
 @media (max-width: 980px) {
     .contato-sec {
-        padding: 0 24px 70px;
+        padding-bottom: 70px;
     }
 }
 
 @media (max-width: 640px) {
+    .contato-sec{
+        gap: 18px;
+        padding-bottom: 56px;
+    }
+
     .contato-header {
         padding: 22px;
         border-radius: 22px;
@@ -162,5 +167,39 @@
     .contato-header h2,
     .contato-header span {
         font-size: 28px;
+    }
+
+    .contato-card-top{
+        align-items: flex-start;
+    }
+
+    .contato-badge{
+        max-width: 150px;
+        text-align: center;
+        line-height: 1.25;
+    }
+
+    .contato-link{
+        width: 100%;
+        min-height: 46px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 380px) {
+    .contato-header,
+    .contato-card {
+        padding: 18px;
+    }
+
+    .contato-card-top{
+        flex-direction: column;
+    }
+
+    .contato-badge{
+        max-width: none;
+        text-align: left;
     }
 }

@@ -8,6 +8,23 @@
   
 }
 
+:root{
+  --page-padding: 100px;
+  --section-inner-padding: 67px;
+  --card-radius: 28px;
+  --mobile-page-padding: 18px;
+}
+
+html,
+body{
+  overflow-x: hidden;
+}
+
+img,
+svg{
+  max-width: 100%;
+}
+
 p{
   font-family: "Fredoka", sans-serif;
   color: white;
@@ -15,6 +32,21 @@ p{
 
 body{
   background-color: #141724;
+}
+
+@media (max-width: 1180px) {
+  :root{
+    --page-padding: 48px;
+    --section-inner-padding: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root{
+    --page-padding: var(--mobile-page-padding);
+    --section-inner-padding: 0;
+    --card-radius: 22px;
+  }
 }
 
  /* #713BF6 */

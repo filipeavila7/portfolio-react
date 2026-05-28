@@ -1,5 +1,5 @@
 .proj-sec {
-    padding: 0 67px 70px;
+    padding: 0 var(--section-inner-padding) 70px;
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -52,6 +52,7 @@
 .filtro-box{
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .filtro{
@@ -128,14 +129,16 @@
 .desc-card{
     font-size: 16px;
     color: #d8d8d8;
-    width: 500px;
-    height: 50px;
-    padding-right: 30px;
+    width: 100%;
+    min-height: 50px;
+    padding-right: 0;
+    line-height: 1.45;
 }
 
 .card-tags{
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
     
 }
 
@@ -320,7 +323,7 @@
 
 @media (max-width: 980px) {
     .proj-sec {
-        padding: 0 24px 70px;
+        padding-bottom: 70px;
     }
 
     .proj-box {
@@ -329,19 +332,68 @@
 }
 
 @media (max-width: 640px) {
+    .proj-sec{
+        gap: 18px;
+        padding-bottom: 56px;
+    }
+
     .proj-header {
         padding: 22px;
         border-radius: 22px;
     }
 
+    .proj-intro{
+        padding-bottom: 8px;
+    }
+
+    .filtro-box{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .filtro{
+        min-height: 44px;
+        justify-content: center;
+        padding: 10px 12px;
+        font-size: 15px;
+    }
+
+    .filtro.active {
+        transform: none;
+    }
+
     .proj-box {
         grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .card{
+        border-radius: 20px;
+    }
+
+    .card-img{
+        height: 180px;
+    }
+
+    .card-content{
+        padding: 18px;
+    }
+
+    .desc-card{
+        min-height: auto;
     }
 
     .card-actions{
         flex-direction: column;
         align-items: stretch;
         padding: 0;
+        gap: 10px;
+    }
+
+    .action{
+        min-height: 46px;
+        padding: 10px 16px;
     }
 
     .modal-overlay{
@@ -358,5 +410,32 @@
 
     .modal-content{
         padding: 20px;
+    }
+
+    .modal-link-card{
+        align-items: flex-start;
+        padding: 14px;
+    }
+}
+
+@media (max-width: 380px) {
+    .proj-header,
+    .card-content,
+    .modal-content {
+        padding: 18px;
+    }
+
+    .filtro-box{
+        grid-template-columns: 1fr;
+    }
+
+    .card-img{
+        height: 155px;
+    }
+
+    .modal-link-icon{
+        width: 40px;
+        height: 40px;
+        flex: 0 0 auto;
     }
 }
