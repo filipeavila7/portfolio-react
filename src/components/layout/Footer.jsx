@@ -1,5 +1,6 @@
 import "../../styles/footer.css";
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
+import { asset } from "../../utils/asset";
 
 const atalhos = [
   { href: "#inicio", label: "Inicio" },
@@ -33,7 +34,7 @@ export default function Footer() {
       <div className="footer-main">
         <div className="footer-brand">
           <div className="footer-logo">
-            <img src="/code.png" alt="" />
+            <img src={asset("code.png")} alt="" />
             <p>Filipe Pereira</p>
           </div>
           <p className="footer-text">

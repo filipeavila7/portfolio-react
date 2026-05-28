@@ -1,4 +1,5 @@
 import "../../styles/navBar.css";
+import { asset } from "../../utils/asset";
 
 const linksNavegacao = [
   { id: "inicio", label: "Início" },
@@ -15,7 +16,7 @@ export default function NavBar({ secaoAtiva }) {
     <header className="nav-header">
       <nav className="nav-bar">
         <a href="#inicio" className="logo-box">
-          <img src="/code.png" alt="" />
+          <img src={asset("code.png")} alt="" />
           <p>Filipe Pereira</p>
         </a>
 
@@ -31,8 +32,8 @@ export default function NavBar({ secaoAtiva }) {
             </li>
           ))}
 
-          <a href="/currículo-Filipe-final.pdf" download className="curriculo-box">
-            <img src="/downloads.png" alt="" className="cv-icon" />
+          <a href={asset("currículo-Filipe-final.pdf")} download className="curriculo-box">
+            <img src={asset("downloads.png")} alt="" className="cv-icon" />
             <p>Download CV</p>
           </a>
         </ul>

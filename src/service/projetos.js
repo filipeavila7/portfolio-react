@@ -1,3 +1,5 @@
+import { asset } from "../utils/asset";
+
 export const projetos = [
   {
     titulo: "Rede social ArtiSphere",
@@ -5,7 +7,7 @@ export const projetos = [
       "Rede Social completa, desenvolvida para artistas postarem os seus desenhos e se conectarem",
     descricaoDetalhada:
       "Projeto fullstack de rede social voltado para a comunidade de artistas, permitindo o compartilhamento de publicações, interação entre usuários e uma experiência social completa, com autenticação e diferentes níveis de acesso (artistas, usuários e administradores), além de funcionalidades como curtidas, comentários, sistema de seguidores e troca de mensagens em tempo real via WebSockets, focado em oferecer uma interface moderna, responsiva e uma experiência fluida de interação entre criadores e consumidores de conteúdo.",
-    imagem: "/proj1.jpeg",
+    imagem: asset("proj1.jpeg"),
     tags: ["React", "Spring Boot", "JWT"],
     tipo: "ANDAMENTO",
     linksProjeto: [
@@ -35,7 +37,7 @@ export const projetos = [
       "Sistema de chat bot utilizando a API do Gemini para geração de respostas",
     descricaoDetalhada:
       "Aplicação fullstack de chatbot com foco em conversação assistida por inteligência artificial, integrando uma interface web simples com processamento de perguntas e respostas em tempo real, utilizando um backend em Python com Flask e comunicação com APIs externas de IA, como o Google Gemini, com suporte para alternância entre diferentes provedores de modelo, oferecendo flexibilidade na escolha da inteligência artificial utilizada e uma experiência leve e funcional para o usuário.",
-    imagem: "/proj2.jpeg",
+    imagem: asset("proj2.jpeg"),
     tags: ["Gemini Api", "Flask", "Java-Script"],
     tipo: "FULL",
     linksProjeto: [
@@ -60,7 +62,7 @@ export const projetos = [
       "Sistema de Pokedex com painel administrativo para controle completo",
     descricaoDetalhada:
       "Projeto de catálogo de Pokémons com interface interativa, incluindo painel administrativo para gerenciamento de dados e funcionalidades de busca e organização de informações, proporcionando uma experiência dinâmica de navegação e exploração dos registros, com foco em usabilidade, estruturação de dados e facilidade de manutenção.",
-    imagem: "/fundo.png",
+    imagem: asset("fundo.png"),
     tags: ["React", "Spring Boot", "JWT"],
     tipo: "ANDAMENTO",
     linksProjeto: [
@@ -89,7 +91,7 @@ export const projetos = [
     descricaoCurta: "Classico jogo da cobrinha com logica Java-Script",
     descricaoDetalhada:
       "Jogo da cobrinha desenvolvido em página web utilizando JavaScript para toda a lógica do jogo, com foco na manipulação de eventos, controle de movimento e detecção de colisões, proporcionando uma experiência simples e interativa baseada no clássico jogo Snake.",
-    imagem: "/proj4.jpeg",
+    imagem: asset("proj4.jpeg"),
     tags: ["Java-Script"],
     tipo: "PAGINA",
     linksProjeto: [
@@ -115,7 +117,7 @@ export const projetos = [
       "Página web voltada a conscientização e demonstração de práticas sustentáveis.",
     descricaoDetalhada:
       "Landing page desenvolvida como projeto de curso técnico para apresentar uma proposta visual impactante sobre práticas sustentáveis voltadas ao meio ambiente, com foco em storytelling, organização clara das seções e experiência de navegação intuitiva, buscando conscientizar o usuário por meio de um design moderno e conteúdo educativo.",
-    imagem: "/proj5.jpeg",
+    imagem: asset("proj5.jpeg"),
     tags: ["Java-Script", "HTML", "CSS"],
     tipo: "PAGINA",
     linksProjeto: [
@@ -141,7 +143,7 @@ export const projetos = [
       "Página desenvolvida para uma ONG de resgate de cães e gatos, com foco em apresentar informações sobre adoção.",
     descricaoDetalhada:
       "Projeto desenvolvido como trabalho da faculdade para uma ONG de resgate de cães e gatos, com o objetivo de criar uma presença digital organizada e acessível para divulgação da causa animal, apresentando informações sobre adoção, resgates, formas de apoio e conscientização, utilizando uma interface intuitiva, navegação simples e uma proposta visual acolhedora voltada à conexão entre a organização e o público.",
-    imagem: "/proj11.png",
+    imagem: asset("proj11.png"),
     tags: ["Java-Script", "HTML", "CSS"],
     tipo: "PAGINA",
     linksProjeto: [
@@ -167,7 +169,7 @@ export const projetos = [
       "Sistema de monitoramento de irrigação inteligente utilizando Arduíno para controle e automação da umidade do solo",
     descricaoDetalhada:
       "Projeto integrando software e hardware para monitoramento agrícola, desenvolvido como projeto do curso técnico do SENAI, com foco em automação de processos, utilização de sensores e acompanhamento de dados em tempo real, permitindo a coleta e análise de informações para auxiliar na tomada de decisões e otimizar o controle de recursos no ambiente agrícola.",
-    imagem: "/proj6.jpeg",
+    imagem: asset("proj6.jpeg"),
     tags: ["Java-Script", "Flask", "C++"],
     tipo: "FULL",
     linksProjeto: [
@@ -192,7 +194,7 @@ export const projetos = [
       "Site para petshop com área administrativa para gerenciamento completo de pets e produtos cadastrados",
     descricaoDetalhada:
       "Projeto de sistema para petshop com foco no gerenciamento de produtos, cadastro e acompanhamento de animais, além de uma área administrativa para controle de informações e organização dos processos internos, proporcionando uma experiência prática e eficiente para administração do estabelecimento.",
-    imagem: "/proj7.jpeg",
+    imagem: asset("proj7.jpeg"),
     tags: ["Java-Script", "Flask"],
     tipo: "FULL",
     linksProjeto: [
@@ -216,7 +218,7 @@ export const projetos = [
       "API desenvolvida para controle de agendamentos, cortes e gerenciamento de clientes em uma barbearia.",
     descricaoDetalhada:
       "API desenvolvida como projeto do curso técnico do SENAI, pensada para atender o fluxo de uma barbearia, realizando o gerenciamento de horários, serviços, clientes e da área administrativa do negócio, com foco na organização dos processos, estruturação de dados e comunicação eficiente entre sistema e banco de dados.",
-    imagem: "/proj8.jpeg",
+    imagem: asset("proj8.jpeg"),
     tags: ["Python", "Flask"],
     tipo: "API",
     linksProjeto: [
@@ -240,7 +242,7 @@ export const projetos = [
       "Simples TodoList completo para mobile, utilizando o framework Flet",
     descricaoDetalhada:
       "Aplicação mobile de gerenciamento de tarefas desenvolvida como projeto do curso técnico do SENAI e um dos meus primeiros aplicativos, utilizando Python com o framework Flet para criação da interface multiplataforma, com foco em organização pessoal, navegação simples e experiência prática no desenvolvimento de aplicações mobile integradas a interface gráfica e manipulação de dados.",
-    imagem: "/proj9.jpeg",
+    imagem: asset("proj9.jpeg"),
     tags: ["Python", "Flet"],
     tipo: "FULL",
     linksProjeto: [
@@ -264,7 +266,7 @@ export const projetos = [
     descricaoCurta: "Simples jogo da velha com logica Java-Script",
     descricaoDetalhada:
       "Projeto enxuto para treino de lógica, validação de jogadas e atualizao dinâmica da interface em tempo real.",
-    imagem: "/proj10.jpeg",
+    imagem: asset("proj10.jpeg"),
     tags: ["Java-Script"],
     tipo: "PAGINA",
     linksProjeto: [

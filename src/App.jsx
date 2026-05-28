@@ -16,6 +16,7 @@ import { SiVite, SiFastapi, SiTypescript, SiJavascript, SiSpringsecurity, SiMysq
 import { projetos } from "./service/projetos";
 import CardProj from "./components/CardProj";
 import ProjectModal from "./components/ProjectModal";
+import { asset } from "./utils/asset";
 
 function App() {
   const [secaoAtiva, setSecaoAtiva] = useState("inicio");
@@ -159,7 +160,10 @@ function App() {
 
   return (
     <>
-      <div className="app-inicio-lay">
+      <div
+        className="app-inicio-lay"
+        style={{ "--inicio-bg": `url("${asset("fundo.png")}")` }}
+      >
         <div className="overlay"></div>
         <NavBar secaoAtiva={secaoAtiva} />
         <section id="inicio" className="inicio-sec">
@@ -189,16 +193,16 @@ function App() {
               <div className="botao-box">
                 <a href="#projetos" className="btn-projetos">
                   Ver Projetos
-                  <img className="btn-icon" src="/flecha.png" alt="" />
+                  <img className="btn-icon" src={asset("flecha.png")} alt="" />
                 </a>
                 <a href="#contato" className="btn-contato">
                   Entre em contato
-                  <img className="btn-icon" src="/balao.png" alt="" />
+                  <img className="btn-icon" src={asset("balao.png")} alt="" />
                 </a>
               </div>
             </div>
             <div className="img-inicio-box">
-              <img src="/foto.jpeg" alt="Foto de Filipe Pereira" />
+              <img src={asset("foto.jpeg")} alt="Foto de Filipe Pereira" />
             </div>
           </div>
         </section>
@@ -241,15 +245,15 @@ function App() {
 
                 <div className="stack-grid">
                   <div className="destaque-item">
-                    <img src="/rocket.png" alt="" className="destaque-icon" />
+                    <img src={asset("rocket.png")} alt="" className="destaque-icon" />
                     <p>Ágil</p>
                   </div>
                   <div className="destaque-item">
-                    <img src="/chat.png" alt="" className="destaque-icon" />
+                    <img src={asset("chat.png")} alt="" className="destaque-icon" />
                     <p>Comunicativo</p>
                   </div>
                   <div className="destaque-item">
-                    <img src="/grupo.png" alt="" className="destaque-icon" />
+                    <img src={asset("grupo.png")} alt="" className="destaque-icon" />
                     <p>Trabalho em equipe</p>
                   </div>
                 </div>
