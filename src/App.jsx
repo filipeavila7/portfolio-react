@@ -123,8 +123,8 @@ function App() {
       titulo: "LinkedIn",
       descricao: "Para networking, oportunidades e conversas profissionais.",
       acao: "Abrir perfil",
-      valor: "https://www.linkedin.com/in/filipe-pereira-ab843530a",
-      href: "https://www.linkedin.com/in/filipe-pereira-ab843530a",
+      valor: "https://www.linkedin.com/in/filipe-pereira-devspnx",
+      href: "https://www.linkedin.com/in/filipe-pereira-devspnx",
       destaque: false,
       icone: <FaLinkedin />
     },
