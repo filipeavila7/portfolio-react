@@ -107,12 +107,12 @@ function App() {
         modalProjeto.linkProjeto,
         modalProjeto.linksProjeto,
         "Abrir projeto",
-        "Visualizar deploy ou demonstracao"
+        "Visualizar deploy ou demonstração"
       ),
       linksGit: normalizarLinks(
         modalProjeto.linkGit,
         modalProjeto.linksGit,
-        "Abrir repositorio",
+        "Abrir repositório",
         "Codigo-fonte do projeto"
       ),
     }
@@ -139,7 +139,7 @@ function App() {
     },
     {
       titulo: "GitHub",
-      descricao: "Aqui voce pode acompanhar meus projetos e meu codigo.",
+      descricao: "Aqui voce pode acompanhar meus projetos e meu código.",
       acao: "Ver GitHub",
       valor: "https://github.com/filipeavila7",
       href: "https://github.com/filipeavila7",
@@ -148,7 +148,7 @@ function App() {
     },
     {
       titulo: "WhatsApp",
-      descricao: "Contato rapido para conversas objetivas e alinhamentos.",
+      descricao: "Contato rápido para conversas objetivas e alinhamentos.",
       acao: "Chamar no WhatsApp",
       valor: "55 (61) 98418-8269",
       href: "https://wa.me/5561984188269",
@@ -172,9 +172,9 @@ function App() {
               <div className="dev">
                 <p>● FULLSTACK DEVELOPER</p>
               </div>
-              <h1>
-                Filipe <span>Pereira</span>
-              </h1>
+              <h1 className="typing">
+  Filipe <span className="highlight">Pereira</span>
+</h1>
               <p className="descricao">
                 Desenvolvedor Full Stack em inicio de carreira, focado no
                 desenvolvimento de aplicacoes web modernas e responsivas.
@@ -202,7 +202,7 @@ function App() {
               </div>
             </div>
             <div className="img-inicio-box">
-              <img src={asset("foto.jpeg")} alt="Foto de Filipe Pereira" />
+              <img src={asset("foto1.jpeg")} alt="Foto de Filipe Pereira" />
             </div>
           </div>
         </section>
@@ -437,7 +437,7 @@ function App() {
         <section id="certificados" className="cert-sec">
           <div className="cert-header">
             <p className="cert-tag">APRENDIZADO CONTINUO</p>
-            <h2>Certificados</h2>
+            <h2>Cursos</h2>
             <p className="cert-intro">
               Cursos e certificacoes que reforcaram minha base tecnica em
               desenvolvimento, ferramentas e boas praticas.
@@ -452,14 +452,14 @@ function App() {
                 </div>
               </div>
               <h3>Java Orientado a Objetos</h3>
-              <p className="cert-origem">Curso complementar</p>
+              <p className="cert-origem">Maratona Java - Dev dojo</p>
               <p>
                 Estudos focados em POO, classes, encapsulamento, heranca e
                 organizacao de codigo para projetos backend.
               </p>
               <div className="cert-meta">
                 <span>Concluido</span>
-                <span>Certificado disponivel</span>
+              
               </div>
             </article>
 
@@ -580,8 +580,8 @@ function App() {
               Entre em <span>contato</span>
             </h2>
             <p className="contato-intro">
-              Se quiser conversar sobre projetos, oportunidade de estagio,
-              freelance ou tecnologia, estes sao os canais mais rapidos para me
+              Se quiser conversar sobre projetos, oportunidade de estágio,
+              freelance ou tecnologia, estes são os canais mais rápidos para me
               encontrar.
             </p>
           </div>

@@ -8,7 +8,7 @@ const linksNavegacao = [
   { id: "sobre", label: "Sobre" },
   { id: "tecnologias", label: "Tecnologias" },
   { id: "formacoes", label: "Formações" },
-  { id: "certificados", label: "Certificados" },
+  { id: "certificados", label: "Cursos" },
   { id: "projetos", label: "Projetos" },
   { id: "contato", label: "Contato" },
 ];
@@ -57,7 +57,7 @@ export default function NavBar({ secaoAtiva }) {
 
           <li>
             <a
-              href={asset("currículo-Filipe-final.pdf")}
+              href={asset("curriculo-Filipe-final.pdf")}
               download
               className="curriculo-box"
               onClick={fecharMenu}

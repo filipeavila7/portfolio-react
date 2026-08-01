@@ -38,7 +38,7 @@ export default function Footer() {
             <p>Filipe Pereira</p>
           </div>
           <p className="footer-text">
-            Desenvolvedor Full Stack em formacao, aberto para estagio e novas
+            Desenvolvedor Full Stack em formação, aberto para estágio e novas
             oportunidades.
           </p>
         </div>

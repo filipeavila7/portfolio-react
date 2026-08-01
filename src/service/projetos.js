@@ -13,8 +13,8 @@ export const projetos = [
     linksProjeto: [
       {
         label: "Aplicação principal",
-        descricao: "Versão web da plataforma",
-        href: "https://seudominio.com/artisphere",
+        descricao: "Sem deploy no momento",
+        
       },
       
     ],
@@ -32,6 +32,36 @@ export const projetos = [
     ],
   },
   {
+    titulo: "Ametisty - Gerenciador de gastos",
+    descricaoCurta:
+      "Gerenciador de gastos para famílias com controle financeiro compartilhado ",
+    descricaoDetalhada:
+      "O Gerenciador de Gastos para Famílias é uma aplicação web voltada para o controle financeiro compartilhado. O sistema permite cadastrar produtos reutilizáveis organizados por categorias, criar listas de compras, registrar compras e receitas, além de gerar automaticamente transações de despesas ao finalizar uma compra. Também oferece gráficos com a distribuição dos gastos por mês, categoria e produto, facilitando a análise financeira. Além disso, possui um sistema de compartilhamento familiar, permitindo que vários membros participem da mesma família e acompanhem as informações financeiras em conjunto. O projeto foi desenvolvido com Java, Spring Boot, Spring Security, JWT, JPA/Hibernate e MySQL no backend, e React, TypeScript e CSS no frontend.",
+    imagem: asset("proj12.png"),
+    tags: ["Type-script", "Spring Boot", "JWT"],
+    tipo: "FULL",
+    linksProjeto: [
+      {
+        label: "Aplicação principal",
+        descricao: "Sem deploy no momento",
+        
+      },
+      
+    ],
+    linksGit: [
+      {
+        label: "Frontend",
+        descricao: "Repositório React do projeto",
+        href: "https://github.com/filipeavila7/front-gerenciador.git",
+      },
+      {
+        label: "Backend",
+        descricao: "API Spring Boot do projeto",
+        href: "https://github.com/filipeavila7/api-gerenciador-de-gastos.git",
+      },
+    ],
+  },
+  {
     titulo: "Chat bot",
     descricaoCurta:
       "Sistema de chat bot utilizando a API do Gemini para geração de respostas",
@@ -43,8 +73,8 @@ export const projetos = [
     linksProjeto: [
       {
         label: "Chat principal",
-        descricao: "Interface publica do assistente",
-        href: "https://seudominio.com/chatbot",
+        descricao: "Sem deploy no momento",
+    
       },
       
     ],
@@ -68,15 +98,15 @@ export const projetos = [
     linksProjeto: [
       {
         label: "Pokedex online",
-        descricao: "Versao publica da aplicacao",
-        href: "https://seudominio.com/pokedex",
+        descricao: "Sem deploy no momento",
+
       },
     
     ],
     linksGit: [
       {
         label: "Frontend",
-        descricao: "Repositorio React da Pokedex",
+        descricao: "Repositório React da Pokedex",
         href: "https://github.com/filipeavila7/pokedex-front.git",
       },
       {
@@ -97,7 +127,7 @@ export const projetos = [
     linksProjeto: [
       {
         label: "Jogo online",
-        descricao: "Versao jogavel no navegador",
+        descricao: "Versao jogavel no navegador - disponível",
         href: "https://filipeavila7.github.io/cobrinha-js/",
       },
 
@@ -105,7 +135,7 @@ export const projetos = [
     linksGit: [
       {
         label: "Codigo principal",
-        descricao: "Repositorio da versao final",
+        descricao: "Repositório da versao final",
         href: "https://github.com/filipeavila7/cobrinha-js.git",
       },
     
@@ -123,7 +153,7 @@ export const projetos = [
     linksProjeto: [
       {
         label: "Landing page",
-        descricao: "Versao principal publicada",
+        descricao: "Versao principal publicada - disponível",
         href: "https://filipeavila7.github.io/projeto-front-teste",
       },
   
@@ -131,7 +161,7 @@ export const projetos = [
     linksGit: [
       {
         label: "Codigo principal",
-        descricao: "Repositorio da landing page",
+        descricao: "Repositório da landing page",
         href: "https://github.com/filipeavila7/projeto-front-teste.git",
       },
      
@@ -149,15 +179,15 @@ export const projetos = [
     linksProjeto: [
       {
         label: "Landing page",
-        descricao: "Versao principal publicada",
-        href: "",
+        descricao: "Sem deploy no momento",
+        
       },
   
     ],
     linksGit: [
       {
         label: "Codigo principal",
-        descricao: "Repositorio da landing page",
+        descricao: "Repositório da landing page",
         href: "https://github.com/filipeavila7/ONG-Filipe-Pereira-Viana-Avila.git",
       },
      
@@ -175,15 +205,15 @@ export const projetos = [
     linksProjeto: [
       {
         label: "Dashboard",
-        descricao: "Painel de monitoramento do sistema",
-        href: "https://seudominio.com/irrigacao",
+        descricao: "Sem deploy no momento",
+      
       },
     ],
     linksGit: [
       {
         label: "Software web",
-        descricao: "Repositorio privado",
-        href: "#",
+        descricao: "Repositório privado",
+     
       },
     
     ],
@@ -200,14 +230,14 @@ export const projetos = [
     linksProjeto: [
       {
         label: "Pet Amigos",
-        descricao: "Area de gerenciamento do petshop",
-        href: "https://admin.seudominio.com/pet-amigos",
+        descricao: "Sem deploy no momento",
+
       },
     ],
     linksGit: [
       {
         label: "FullStack",
-        descricao: "Repositorio Flask do sistema",
+        descricao: "Repositório Flask do sistema",
         href: "https://github.com/filipeavila7/site-petshop.git",
       },
     ],
@@ -224,14 +254,14 @@ export const projetos = [
     linksProjeto: [
       {
         label: "Api",
-        descricao: "Endpoint publicado para validacoes",
-        href: "https://api.seudominio.com/barbearia",
+        descricao: "Sem deploy no momento",
+       
       },
     ],
     linksGit: [
       {
         label: "API principal",
-        descricao: "Repositorio da API Flask",
+        descricao: "Repositório da API Flask",
         href: "https://github.com/filipeavila7/sgu.git",
       },
     ],
@@ -248,14 +278,14 @@ export const projetos = [
     linksProjeto: [
       {
         label: "Apresentacao do app",
-        descricao: "Pagina com demonstracao do projeto",
-        href: "https://seudominio.com/todolist-mobile",
+        descricao: "Sem deploy no momento",
+  
       }
     ],
     linksGit: [
       {
         label: "Aplicativo",
-        descricao: "Repositorio principal em Flet",
+        descricao: "Repositório principal em Flet",
         href: "https://github.com/filipeavila7/todolist_final.git",
       },
     
@@ -272,15 +302,15 @@ export const projetos = [
     linksProjeto: [
       {
         label: "Jogo online",
-        descricao: "Versao principal no navegador",
-        href: "https://seudominio.com/jogo-da-velha",
+        descricao: "Sem deploy no momento",
+    
       },
       
     ],
     linksGit: [
       {
         label: "Codigo principal",
-        descricao: "Repositorio do jogo da velha",
+        descricao: "Repositório do jogo da velha",
         href: "https://github.com/filipeavila7/jogo-da-velha.git",
       },
       
