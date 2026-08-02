@@ -92,7 +92,7 @@ export const projetos = [
       "Sistema de Pokedex com painel administrativo para controle completo",
     descricaoDetalhada:
       "Projeto de catálogo de Pokémons com interface interativa, incluindo painel administrativo para gerenciamento de dados e funcionalidades de busca e organização de informações, proporcionando uma experiência dinâmica de navegação e exploração dos registros, com foco em usabilidade, estruturação de dados e facilidade de manutenção.",
-    imagem: asset("fundo.png"),
+    imagem: asset("proj13.png"),
     tags: ["React", "Spring Boot", "JWT"],
     tipo: "ANDAMENTO",
     linksProjeto: [
