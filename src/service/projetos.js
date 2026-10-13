@@ -7,16 +7,20 @@ export const projetos = [
       "Rede Social completa, desenvolvida para artistas postarem os seus desenhos e se conectarem",
     descricaoDetalhada:
       "Projeto fullstack de rede social voltado para a comunidade de artistas, permitindo o compartilhamento de publicações, interação entre usuários e uma experiência social completa, com autenticação e diferentes níveis de acesso (artistas, usuários e administradores), além de funcionalidades como curtidas, comentários, sistema de seguidores e troca de mensagens em tempo real via WebSockets, focado em oferecer uma interface moderna, responsiva e uma experiência fluida de interação entre criadores e consumidores de conteúdo.",
-    imagem: asset("proj1.jpeg"),
+    imagem: asset("proj1.png"),
+    imagens: [
+      asset("proj1.png"),
+      asset("proj1-2.png"),
+      asset("proj1-3.png"),
+      asset("proj1-4.png"),
+    ],
     tags: ["React", "Spring Boot", "JWT"],
     tipo: "ANDAMENTO",
     linksProjeto: [
       {
         label: "Aplicação principal",
         descricao: "Sem deploy no momento",
-        
       },
-      
     ],
     linksGit: [
       {
@@ -38,15 +42,19 @@ export const projetos = [
     descricaoDetalhada:
       "O Gerenciador de Gastos para Famílias é uma aplicação web voltada para o controle financeiro compartilhado. O sistema permite cadastrar produtos reutilizáveis organizados por categorias, criar listas de compras, registrar compras e receitas, além de gerar automaticamente transações de despesas ao finalizar uma compra. Também oferece gráficos com a distribuição dos gastos por mês, categoria e produto, facilitando a análise financeira. Além disso, possui um sistema de compartilhamento familiar, permitindo que vários membros participem da mesma família e acompanhem as informações financeiras em conjunto. O projeto foi desenvolvido com Java, Spring Boot, Spring Security, JWT, JPA/Hibernate e MySQL no backend, e React, TypeScript e CSS no frontend.",
     imagem: asset("proj12.png"),
+    imagens: [
+      asset("proj12.png"),
+      asset("proj12-2.png"),
+      asset("proj12-3.png"),
+      asset("proj12-4.png"),
+    ],
     tags: ["Type-script", "Spring Boot", "JWT"],
     tipo: "FULL",
     linksProjeto: [
       {
         label: "Aplicação principal",
         descricao: "Sem deploy no momento",
-        
       },
-      
     ],
     linksGit: [
       {
@@ -68,15 +76,17 @@ export const projetos = [
     descricaoDetalhada:
       "Aplicação fullstack de chatbot com foco em conversação assistida por inteligência artificial, integrando uma interface web simples com processamento de perguntas e respostas em tempo real, utilizando um backend em Python com Flask e comunicação com APIs externas de IA, como o Google Gemini, com suporte para alternância entre diferentes provedores de modelo, oferecendo flexibilidade na escolha da inteligência artificial utilizada e uma experiência leve e funcional para o usuário.",
     imagem: asset("proj2.jpeg"),
+    imagens: [
+      asset("proj2.jpeg"),
+      asset("proj3.jpeg"),
+    ],
     tags: ["Gemini Api", "Flask", "Java-Script"],
     tipo: "FULL",
     linksProjeto: [
       {
         label: "Chat principal",
         descricao: "Sem deploy no momento",
-    
       },
-      
     ],
     linksGit: [
       {
@@ -93,15 +103,19 @@ export const projetos = [
     descricaoDetalhada:
       "Projeto de catálogo de Pokémons com interface interativa, incluindo painel administrativo para gerenciamento de dados e funcionalidades de busca e organização de informações, proporcionando uma experiência dinâmica de navegação e exploração dos registros, com foco em usabilidade, estruturação de dados e facilidade de manutenção.",
     imagem: asset("proj13.png"),
+    imagens: [
+      asset("proj13.png"),
+      asset("proj13-2.png"),
+      asset("proj13-3.png"),
+      asset("proj13-4.png"),
+    ],
     tags: ["React", "Spring Boot", "JWT"],
-    tipo: "ANDAMENTO",
+    tipo: "FULL",
     linksProjeto: [
       {
         label: "Pokedex online",
         descricao: "Sem deploy no momento",
-
       },
-    
     ],
     linksGit: [
       {
@@ -122,6 +136,10 @@ export const projetos = [
     descricaoDetalhada:
       "Jogo da cobrinha desenvolvido em página web utilizando JavaScript para toda a lógica do jogo, com foco na manipulação de eventos, controle de movimento e detecção de colisões, proporcionando uma experiência simples e interativa baseada no clássico jogo Snake.",
     imagem: asset("proj4.jpeg"),
+    imagens: [
+      asset("proj4.jpeg"),
+      asset("proj10.jpeg"),
+    ],
     tags: ["Java-Script"],
     tipo: "PAGINA",
     linksProjeto: [
@@ -130,7 +148,6 @@ export const projetos = [
         descricao: "Versao jogavel no navegador - disponível",
         href: "https://filipeavila7.github.io/cobrinha-js/",
       },
-
     ],
     linksGit: [
       {
@@ -138,7 +155,6 @@ export const projetos = [
         descricao: "Repositório da versao final",
         href: "https://github.com/filipeavila7/cobrinha-js.git",
       },
-    
     ],
   },
   {
@@ -148,6 +164,10 @@ export const projetos = [
     descricaoDetalhada:
       "Landing page desenvolvida como projeto de curso técnico para apresentar uma proposta visual impactante sobre práticas sustentáveis voltadas ao meio ambiente, com foco em storytelling, organização clara das seções e experiência de navegação intuitiva, buscando conscientizar o usuário por meio de um design moderno e conteúdo educativo.",
     imagem: asset("proj5.jpeg"),
+    imagens: [
+      asset("proj5.jpeg"),
+      asset("proj11.png"),
+    ],
     tags: ["Java-Script", "HTML", "CSS"],
     tipo: "PAGINA",
     linksProjeto: [
@@ -156,7 +176,6 @@ export const projetos = [
         descricao: "Versao principal publicada - disponível",
         href: "https://filipeavila7.github.io/projeto-front-teste",
       },
-  
     ],
     linksGit: [
       {
@@ -164,7 +183,6 @@ export const projetos = [
         descricao: "Repositório da landing page",
         href: "https://github.com/filipeavila7/projeto-front-teste.git",
       },
-     
     ],
   },
   {
@@ -174,15 +192,17 @@ export const projetos = [
     descricaoDetalhada:
       "Projeto desenvolvido como trabalho da faculdade para uma ONG de resgate de cães e gatos, com o objetivo de criar uma presença digital organizada e acessível para divulgação da causa animal, apresentando informações sobre adoção, resgates, formas de apoio e conscientização, utilizando uma interface intuitiva, navegação simples e uma proposta visual acolhedora voltada à conexão entre a organização e o público.",
     imagem: asset("proj11.png"),
+    imagens: [
+      asset("proj11.png"),
+      asset("proj5.jpeg"),
+    ],
     tags: ["Java-Script", "HTML", "CSS"],
     tipo: "PAGINA",
     linksProjeto: [
       {
         label: "Landing page",
         descricao: "Sem deploy no momento",
-        
       },
-  
     ],
     linksGit: [
       {
@@ -190,7 +210,6 @@ export const projetos = [
         descricao: "Repositório da landing page",
         href: "https://github.com/filipeavila7/ONG-Filipe-Pereira-Viana-Avila.git",
       },
-     
     ],
   },
   {
@@ -200,22 +219,23 @@ export const projetos = [
     descricaoDetalhada:
       "Projeto integrando software e hardware para monitoramento agrícola, desenvolvido como projeto do curso técnico do SENAI, com foco em automação de processos, utilização de sensores e acompanhamento de dados em tempo real, permitindo a coleta e análise de informações para auxiliar na tomada de decisões e otimizar o controle de recursos no ambiente agrícola.",
     imagem: asset("proj6.jpeg"),
+    imagens: [
+      asset("proj6.jpeg"),
+      asset("proj7.jpeg"),
+    ],
     tags: ["Java-Script", "Flask", "C++"],
     tipo: "FULL",
     linksProjeto: [
       {
         label: "Dashboard",
         descricao: "Sem deploy no momento",
-      
       },
     ],
     linksGit: [
       {
         label: "Software web",
         descricao: "Repositório privado",
-     
       },
-    
     ],
   },
   {
@@ -225,13 +245,16 @@ export const projetos = [
     descricaoDetalhada:
       "Projeto de sistema para petshop com foco no gerenciamento de produtos, cadastro e acompanhamento de animais, além de uma área administrativa para controle de informações e organização dos processos internos, proporcionando uma experiência prática e eficiente para administração do estabelecimento.",
     imagem: asset("proj7.jpeg"),
+    imagens: [
+      asset("proj7.jpeg"),
+      asset("proj8.jpeg"),
+    ],
     tags: ["Java-Script", "Flask"],
     tipo: "FULL",
     linksProjeto: [
       {
         label: "Pet Amigos",
         descricao: "Sem deploy no momento",
-
       },
     ],
     linksGit: [
@@ -249,13 +272,16 @@ export const projetos = [
     descricaoDetalhada:
       "API desenvolvida como projeto do curso técnico do SENAI, pensada para atender o fluxo de uma barbearia, realizando o gerenciamento de horários, serviços, clientes e da área administrativa do negócio, com foco na organização dos processos, estruturação de dados e comunicação eficiente entre sistema e banco de dados.",
     imagem: asset("proj8.jpeg"),
+    imagens: [
+      asset("proj8.jpeg"),
+      asset("proj9.jpeg"),
+    ],
     tags: ["Python", "Flask"],
     tipo: "API",
     linksProjeto: [
       {
         label: "Api",
         descricao: "Sem deploy no momento",
-       
       },
     ],
     linksGit: [
@@ -273,14 +299,17 @@ export const projetos = [
     descricaoDetalhada:
       "Aplicação mobile de gerenciamento de tarefas desenvolvida como projeto do curso técnico do SENAI e um dos meus primeiros aplicativos, utilizando Python com o framework Flet para criação da interface multiplataforma, com foco em organização pessoal, navegação simples e experiência prática no desenvolvimento de aplicações mobile integradas a interface gráfica e manipulação de dados.",
     imagem: asset("proj9.jpeg"),
+    imagens: [
+      asset("proj9.jpeg"),
+      asset("proj10.jpeg"),
+    ],
     tags: ["Python", "Flet"],
     tipo: "FULL",
     linksProjeto: [
       {
         label: "Apresentacao do app",
         descricao: "Sem deploy no momento",
-  
-      }
+      },
     ],
     linksGit: [
       {
@@ -288,7 +317,6 @@ export const projetos = [
         descricao: "Repositório principal em Flet",
         href: "https://github.com/filipeavila7/todolist_final.git",
       },
-    
     ],
   },
   {
@@ -297,15 +325,17 @@ export const projetos = [
     descricaoDetalhada:
       "Projeto enxuto para treino de lógica, validação de jogadas e atualizao dinâmica da interface em tempo real.",
     imagem: asset("proj10.jpeg"),
+    imagens: [
+      asset("proj10.jpeg"),
+      asset("proj4.jpeg"),
+    ],
     tags: ["Java-Script"],
     tipo: "PAGINA",
     linksProjeto: [
       {
         label: "Jogo online",
         descricao: "Sem deploy no momento",
-    
       },
-      
     ],
     linksGit: [
       {
@@ -313,7 +343,7 @@ export const projetos = [
         descricao: "Repositório do jogo da velha",
         href: "https://github.com/filipeavila7/jogo-da-velha.git",
       },
-      
     ],
   },
 ];
+

@@ -3,15 +3,17 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
+    position: relative;
+    z-index: 2;
 }
 
 .form-box {
-    padding: 32px;
+    padding: 34px;
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 28px;
-    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
     background:
-        radial-gradient(circle at top right, rgba(113, 59, 246, 0.22), transparent 38%),
+        radial-gradient(circle at top right, rgba(113, 59, 246, 0.22), transparent 40%),
         linear-gradient(160deg, #101427 0%, #090b15 100%);
 }
 
@@ -24,10 +26,10 @@
 
 .form-tag {
     width: fit-content;
-    padding: 7px 12px;
+    padding: 7px 14px;
     border-radius: 999px;
     background: rgba(113, 59, 246, 0.16);
-    border: 1px solid rgba(113, 59, 246, 0.3);
+    border: 1px solid rgba(113, 59, 246, 0.35);
     color: #d9c7ff;
     font-size: 12px;
     font-weight: 600;
@@ -36,12 +38,16 @@
 
 .form-header h2 {
     color: white;
-    font-size: clamp(26px, 4vw, 30px);
+    font-size: clamp(26px, 4vw, 34px);
+}
+
+.form-header h2 span {
+    color: #8b5cff;
 }
 
 .form-intro {
     color: rgba(255, 255, 255, 0.78);
-    font-size: 18px;
+    font-size: 17px;
     line-height: 1.7;
 }
 
@@ -49,31 +55,44 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 26px;
+    gap: 28px;
     padding-left: 88px;
 }
 
 .form-line {
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: 10px;
+    bottom: 20px;
     left: 26px;
-    width: 2px;
-    background: #713BF6
+    width: 3px;
+    border-radius: 999px;
+    background: linear-gradient(180deg, #713bf6 0%, #8b5cff 50%, #3b82f6 100%);
+    box-shadow: 0 0 12px rgba(113, 59, 246, 0.6);
 }
 
 .form-card {
     position: relative;
-    padding: 24px 26px 24px;
+    padding: 26px 30px;
     border-radius: 24px;
     background:
-        radial-gradient(circle at top right, rgba(113, 59, 246, 0.16), transparent 40%),
+        radial-gradient(circle at top right, rgba(113, 59, 246, 0.16), transparent 42%),
         rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: default;
+}
+
+.form-card:hover {
+    transform: translateX(8px);
+    border-color: rgba(139, 92, 255, 0.45);
+    background:
+        radial-gradient(circle at top right, rgba(113, 59, 246, 0.25), transparent 45%),
+        rgba(255, 255, 255, 0.06);
+    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.3), 0 0 25px rgba(113, 59, 246, 0.2);
 }
 
 .form-dot {
@@ -88,18 +107,33 @@
     justify-content: center;
     color: white;
     background: linear-gradient(145deg, #713bf6 0%, #8b5cff 100%);
-
+    box-shadow: 0 8px 24px rgba(113, 59, 246, 0.45);
     font-size: 20px;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.form-card:hover .form-dot {
+    transform: scale(1.15) rotate(-6deg);
+    box-shadow: 0 10px 30px rgba(139, 92, 255, 0.8), 0 0 20px rgba(113, 59, 246, 0.5);
 }
 
 .form-periodo {
     width: fit-content;
-    padding: 6px 10px;
+    padding: 6px 12px;
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.06);
-    color: #d7cdf8;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e5dbff;
     font-size: 13px;
-    letter-spacing: 0.08em;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+}
+
+.form-card:hover .form-periodo {
+    background: rgba(113, 59, 246, 0.25);
+    border-color: rgba(139, 92, 255, 0.45);
+    color: #ffffff;
 }
 
 .form-card h3 {
@@ -115,7 +149,7 @@
 }
 
 .form-card p {
-    color: rgba(255, 255, 255, 0.78);
+    color: rgba(255, 255, 255, 0.8);
     line-height: 1.7;
 }
 
@@ -135,7 +169,7 @@
 }
 
 @media (max-width: 640px) {
-    .form-sec{
+    .form-sec {
         gap: 18px;
     }
 
@@ -174,12 +208,6 @@
 
     .form-card h3 {
         font-size: 20px;
-    }
-
-    .form-periodo{
-        max-width: 100%;
-        line-height: 1.35;
-        letter-spacing: 0.04em;
     }
 }
 

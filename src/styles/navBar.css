@@ -1,81 +1,115 @@
-.nav-header{
+.nav-header {
     display: flex;
     justify-content: center;
-    padding-top: 10px;
+    padding-top: 14px;
     z-index: 999;
-    
+    position: relative;
 }
 
-.curriculo-box{
+.curriculo-box {
     display: flex;
     align-items: center;
-    border: #713BF6 1px solid;
-    padding: 10px;
-    font-size: 15px;
-    border-radius: 8px;
+    border: 1px solid rgba(139, 92, 255, 0.5);
+    background: rgba(113, 59, 246, 0.14);
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 12px;
     gap: 8px;
-    text-decoration: none   ;
+    text-decoration: none;
     cursor: pointer;
+    box-shadow: 0 4px 15px rgba(113, 59, 246, 0.2);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.curriculo-box p{
+.curriculo-box:hover {
+    background: #8b5cff;
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(113, 59, 246, 0.5), 0 0 15px rgba(139, 92, 255, 0.6);
+}
+
+.curriculo-box p {
     color: white;
 }
 
-.cv-icon{
+.cv-icon {
     width: 17px;
+    transition: transform 0.3s ease;
 }
 
-.logo-box{
+.curriculo-box:hover .cv-icon {
+    transform: translateY(2px);
+}
+
+.logo-box {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     text-decoration: none;
+    transition: transform 0.3s ease;
 }
 
-.logo-box p{
+.logo-box:hover {
+    transform: scale(1.03);
+}
+
+.logo-box p {
     color: white;
     font-size: 19px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
 }
 
-.logo-box img{
-    width: 35px;
+.logo-box img {
+    width: 36px;
+    transition: transform 0.4s ease;
 }
 
-.nav-bar{
+.logo-box:hover img {
+    transform: rotate(15deg) scale(1.1);
+}
+
+.nav-bar {
     position: fixed;
     display: flex;
     justify-content: space-between;
     width: 85%;
-    background-color: #070A1A;
+    background-color: rgba(7, 10, 26, 0.82);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
     align-items: center;
-    padding: 27px;
-    border-radius: 15px;
+    padding: 18px 28px;
+    border-radius: 20px;
     z-index: 999;
+    transition: all 0.3s ease;
 }
 
-.nav-links{
+.nav-links {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 28px;
     align-items: center;
 }
 
-.menu-toggle{
+.menu-toggle {
     display: none;
 }
 
-.nav-links li a:not(.curriculo-box){
+.nav-links li a:not(.curriculo-box) {
     position: relative;
     display: inline-block;
     text-decoration: none;
-    color: rgb(215, 212, 212);
-    font-size: 16px;
-    padding-bottom: 10px;
-    transition: color 0.2s ease;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 15px;
+    font-weight: 500;
+    padding-bottom: 6px;
+    transition: color 0.25s ease;
 }
 
-.nav-links li a:not(.curriculo-box)::after{
+.nav-links li a:not(.curriculo-box)::after {
     content: "";
     position: absolute;
     left: 0;
@@ -83,56 +117,56 @@
     width: 100%;
     height: 3px;
     border-radius: 999px;
-    background: #8b5cff;
+    background: linear-gradient(90deg, #713bf6, #8b5cff);
     transform: scaleX(0);
     transform-origin: center;
-    transition: transform 0.2s ease;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.nav-links li a:not(.curriculo-box):hover{
+.nav-links li a:not(.curriculo-box):hover {
     color: white;
 }
 
 .nav-links li a:not(.curriculo-box):hover::after,
-.nav-link-active::after{
+.nav-link-active::after {
     transform: scaleX(1);
 }
 
-.nav-link-active{
-    color:#ffffff !important;
-    border-bottom: 3px  solid #713BF6;
+.nav-link-active {
+    color: #ffffff !important;
+    font-weight: 600 !important;
 }
 
 @media (max-width: 1180px) {
-    .nav-bar{
+    .nav-bar {
         width: calc(100% - 48px);
-        padding: 20px;
+        padding: 16px 22px;
         gap: 18px;
     }
 
-    .nav-links{
+    .nav-links {
         gap: 18px;
     }
 
-    .nav-links li a:not(.curriculo-box){
-        font-size: 15px;
+    .nav-links li a:not(.curriculo-box) {
+        font-size: 14px;
     }
 }
 
 @media (max-width: 900px) {
-    .nav-bar{
+    .nav-bar {
         align-items: center;
         flex-direction: row;
         width: calc(100% - 36px);
-        padding: 14px;
+        padding: 14px 18px;
         border-radius: 18px;
         position: fixed;
     }
 
-    .menu-toggle{
+    .menu-toggle {
         width: 44px;
         height: 44px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.12);
         border-radius: 14px;
         background: rgba(255, 255, 255, 0.06);
         color: white;
@@ -141,32 +175,32 @@
         align-items: center;
         justify-content: center;
         font-size: 19px;
-        transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+        transition: all 0.25s ease;
     }
 
-    .menu-toggle:hover{
-        background: rgba(113, 59, 246, 0.18);
-        border-color: rgba(139, 92, 255, 0.45);
+    .menu-toggle:hover {
+        background: rgba(113, 59, 246, 0.25);
+        border-color: rgba(139, 92, 255, 0.5);
         transform: translateY(-1px);
     }
 
-    .nav-links{
+    .nav-links {
         position: absolute;
         top: calc(100% + 12px);
         right: 0;
         width: min(290px, calc(100vw - 36px));
         max-height: calc(100vh - 110px);
         overflow-y: auto;
-        padding: 12px;
+        padding: 14px;
         gap: 8px;
         flex-direction: column;
         align-items: stretch;
         border-radius: 20px;
         background:
-            radial-gradient(circle at top right, rgba(113, 59, 246, 0.2), transparent 44%),
+            radial-gradient(circle at top right, rgba(113, 59, 246, 0.25), transparent 44%),
             rgba(7, 10, 26, 0.98);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.38);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
         opacity: 0;
         pointer-events: none;
         transform: translateY(-12px) scale(0.98);
@@ -174,18 +208,18 @@
         transition: opacity 0.24s ease, transform 0.24s ease;
     }
 
-    .nav-links-open{
+    .nav-links-open {
         opacity: 1;
         pointer-events: auto;
         transform: translateY(0) scale(1);
     }
 
-    .nav-links li{
+    .nav-links li {
         width: 100%;
     }
 
     .nav-links li a,
-    .curriculo-box{
+    .curriculo-box {
         width: 100%;
         min-height: 46px;
         display: inline-flex;
@@ -196,36 +230,36 @@
         background: rgba(255, 255, 255, 0.04);
     }
 
-    .nav-links li a{
+    .nav-links li a {
         padding-bottom: 12px;
     }
 
     .nav-links li a::after,
-    .nav-link-active::after{
+    .nav-link-active::after {
         display: none;
     }
 
-    .nav-link-active{
+    .nav-link-active {
         border-bottom: 0;
         background: rgba(113, 59, 246, 0.24) !important;
     }
 
-    .curriculo-box{
+    .curriculo-box {
         font-size: 14px;
         margin-top: 4px;
     }
 }
 
 @media (max-width: 480px) {
-    .nav-bar{
+    .nav-bar {
         width: calc(100% - 24px);
     }
 
-    .logo-box p{
+    .logo-box p {
         font-size: 17px;
     }
 
-    .logo-box img{
+    .logo-box img {
         width: 30px;
     }
 }
