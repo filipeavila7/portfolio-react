@@ -336,7 +336,7 @@ function App() {
 
             <div className="img-inicio-box reveal reveal-scale">
               <div className="avatar-inner">
-                <img src={asset("foto1.jpeg")} alt="Foto de Filipe Pereira" />
+                <img src={asset("foto2.png")} alt="Foto de Filipe Pereira" />
               </div>
 
               {/* Floating interactive badges */}

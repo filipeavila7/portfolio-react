@@ -78,7 +78,7 @@ export const projetos = [
     imagem: asset("proj2.jpeg"),
     imagens: [
       asset("proj2.jpeg"),
-      asset("proj3.jpeg"),
+      asset("proj2-2.png"),
     ],
     tags: ["Gemini Api", "Flask", "Java-Script"],
     tipo: "FULL",
@@ -138,7 +138,7 @@ export const projetos = [
     imagem: asset("proj4.jpeg"),
     imagens: [
       asset("proj4.jpeg"),
-      asset("proj10.jpeg"),
+    
     ],
     tags: ["Java-Script"],
     tipo: "PAGINA",
@@ -166,7 +166,7 @@ export const projetos = [
     imagem: asset("proj5.jpeg"),
     imagens: [
       asset("proj5.jpeg"),
-      asset("proj11.png"),
+      asset("proj5-2.png"),
     ],
     tags: ["Java-Script", "HTML", "CSS"],
     tipo: "PAGINA",
@@ -194,7 +194,7 @@ export const projetos = [
     imagem: asset("proj11.png"),
     imagens: [
       asset("proj11.png"),
-      asset("proj5.jpeg"),
+     
     ],
     tags: ["Java-Script", "HTML", "CSS"],
     tipo: "PAGINA",
@@ -221,7 +221,7 @@ export const projetos = [
     imagem: asset("proj6.jpeg"),
     imagens: [
       asset("proj6.jpeg"),
-      asset("proj7.jpeg"),
+      
     ],
     tags: ["Java-Script", "Flask", "C++"],
     tipo: "FULL",
@@ -247,7 +247,7 @@ export const projetos = [
     imagem: asset("proj7.jpeg"),
     imagens: [
       asset("proj7.jpeg"),
-      asset("proj8.jpeg"),
+     
     ],
     tags: ["Java-Script", "Flask"],
     tipo: "FULL",
@@ -274,7 +274,7 @@ export const projetos = [
     imagem: asset("proj8.jpeg"),
     imagens: [
       asset("proj8.jpeg"),
-      asset("proj9.jpeg"),
+  
     ],
     tags: ["Python", "Flask"],
     tipo: "API",
@@ -301,7 +301,7 @@ export const projetos = [
     imagem: asset("proj9.jpeg"),
     imagens: [
       asset("proj9.jpeg"),
-      asset("proj10.jpeg"),
+   
     ],
     tags: ["Python", "Flet"],
     tipo: "FULL",
@@ -319,31 +319,6 @@ export const projetos = [
       },
     ],
   },
-  {
-    titulo: "Jogo da velha",
-    descricaoCurta: "Simples jogo da velha com logica Java-Script",
-    descricaoDetalhada:
-      "Projeto enxuto para treino de lógica, validação de jogadas e atualizao dinâmica da interface em tempo real.",
-    imagem: asset("proj10.jpeg"),
-    imagens: [
-      asset("proj10.jpeg"),
-      asset("proj4.jpeg"),
-    ],
-    tags: ["Java-Script"],
-    tipo: "PAGINA",
-    linksProjeto: [
-      {
-        label: "Jogo online",
-        descricao: "Sem deploy no momento",
-      },
-    ],
-    linksGit: [
-      {
-        label: "Codigo principal",
-        descricao: "Repositório do jogo da velha",
-        href: "https://github.com/filipeavila7/jogo-da-velha.git",
-      },
-    ],
-  },
+ 
 ];
 
