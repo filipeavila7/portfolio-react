@@ -819,7 +819,7 @@ function App() {
                       title="Copiar endereço de e-mail"
                     >
                       {copiado ? <FaCheck /> : <FaCopy />}
-                      <span>{copiado ? "Copiado! 🎉" : "Copiar"}</span>
+                      <span>{copiado ? "Copiado! " : "Copiar"}</span>
                     </button>
                   )}
                 </div>

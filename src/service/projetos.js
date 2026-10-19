@@ -26,7 +26,7 @@ export const projetos = [
       {
         label: "Frontend",
         descricao: "Repositório React do projeto",
-        href: "https://github.com/filipeavila7/front-rede-social.git",
+        href: "https://github.com/filipeavila7/artisphere-front.git",
       },
       {
         label: "Backend",
