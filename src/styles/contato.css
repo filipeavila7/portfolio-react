@@ -105,7 +105,6 @@
 
 .contato-card:hover .contato-icon {
     transform: scale(1.14) rotate(-6deg);
-    box-shadow: 0 12px 28px rgba(139, 92, 255, 0.75), 0 0 16px rgba(113, 59, 246, 0.5);
 }
 
 .contato-badge {

@@ -114,7 +114,6 @@
 
 .form-card:hover .form-dot {
     transform: scale(1.15) rotate(-6deg);
-    box-shadow: 0 10px 30px rgba(139, 92, 255, 0.8), 0 0 20px rgba(113, 59, 246, 0.5);
 }
 
 .form-periodo {

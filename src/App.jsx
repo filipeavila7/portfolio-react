@@ -190,20 +190,20 @@ function App() {
 
   const projetoSelecionado = modalProjeto
     ? {
-        ...modalProjeto,
-        linksProjeto: normalizarLinks(
-          modalProjeto.linkProjeto,
-          modalProjeto.linksProjeto,
-          "Abrir projeto",
-          "Visualizar deploy ou demonstração"
-        ),
-        linksGit: normalizarLinks(
-          modalProjeto.linkGit,
-          modalProjeto.linksGit,
-          "Abrir repositório",
-          "Codigo-fonte do projeto"
-        ),
-      }
+      ...modalProjeto,
+      linksProjeto: normalizarLinks(
+        modalProjeto.linkProjeto,
+        modalProjeto.linksProjeto,
+        "Abrir projeto",
+        "Visualizar deploy ou demonstração"
+      ),
+      linksGit: normalizarLinks(
+        modalProjeto.linkGit,
+        modalProjeto.linksGit,
+        "Abrir repositório",
+        "Codigo-fonte do projeto"
+      ),
+    }
     : null;
 
   const contatos = [
@@ -248,11 +248,7 @@ function App() {
 
   return (
     <>
-      {/* Scroll Progress Bar */}
-      <div
-        className="scroll-progress-bar"
-        style={{ width: `${progressoScroll}%` }}
-      />
+     
 
       {/* Ambient glowing background orbs */}
       <div className="ambient-background">
@@ -271,7 +267,7 @@ function App() {
         <section id="inicio" className="inicio-sec">
           <div className="inicio-box">
             <div className="dados-box reveal">
-            
+
               <h1>
                 Filipe <span className="highlight">Pereira</span>
               </h1>
@@ -340,7 +336,7 @@ function App() {
               </div>
 
               {/* Floating interactive badges */}
-              
+
             </div>
           </div>
         </section>
@@ -366,13 +362,16 @@ function App() {
                 principalmente com Java e Spring Boot.
               </p>
               <p>
+                Também tenho interesse em Inteligência Artificial, Machine Learning e agentes de IA, buscando explorar como essas tecnologias podem ser aplicadas para criar soluções inteligentes, automatizar processos e agregar valor às aplicações.
+              </p>
+              <p>
                 Atualmente, estou em busca da minha primeira oportunidade na área de
                 tecnologia, enquanto aprofundo meus estudos em desenvolvimento frontend,
                 backend e engenharia de software na graduação.
               </p>
 
               {/* Quick stats counter */}
-              
+
             </div>
 
             <div className="sobre-side">
@@ -786,9 +785,8 @@ function App() {
             {contatos.map((contato, index) => (
               <article
                 key={index}
-                className={`contato-card ${
-                  contato.destaque ? "contato-card-destaque" : ""
-                } reveal reveal-delay-${(index % 3) + 1}`}
+                className={`contato-card ${contato.destaque ? "contato-card-destaque" : ""
+                  } reveal reveal-delay-${(index % 3) + 1}`}
               >
                 <div className="contato-card-top">
                   <div className="contato-icon">{contato.icone}</div>

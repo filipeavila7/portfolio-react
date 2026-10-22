@@ -127,12 +127,11 @@
     background: rgba(113, 59, 246, 0.2);
     border-color: rgba(139, 92, 255, 0.55);
     transform: scale(1.1);
-    box-shadow: 0 14px 30px rgba(113, 59, 246, 0.4), 0 0 20px rgba(139, 92, 255, 0.4);
+    
 }
 
 .tec-content:hover .tec {
     transform: scale(1.12);
-    filter: drop-shadow(0 0 12px rgba(139, 92, 255, 0.85));
 }
 
 .tec-content p {
@@ -149,58 +148,58 @@
 
 /* Individual Brand Glow Highlights on Hover */
 .tec-item-java:hover .tec-box-content {
-    box-shadow: 0 12px 30px rgba(248, 152, 32, 0.4), 0 0 20px rgba(234, 45, 46, 0.3);
+    
     border-color: #f89820;
 }
-.tec-item-java:hover .tec { color: #f89820; filter: drop-shadow(0 0 12px #f89820); }
+.tec-item-java:hover .tec { color: #f89820;}
 
 .tec-item-python:hover .tec-box-content {
-    box-shadow: 0 12px 30px rgba(55, 118, 171, 0.4), 0 0 20px rgba(255, 212, 59, 0.3);
+   
     border-color: #ffd43b;
 }
-.tec-item-python:hover .tec { color: #ffd43b; filter: drop-shadow(0 0 12px #ffd43b); }
+.tec-item-python:hover .tec { color: #ffd43b;  }
 
 .tec-item-react:hover .tec-box-content {
-    box-shadow: 0 12px 30px rgba(97, 218, 251, 0.45), 0 0 22px rgba(97, 218, 251, 0.4);
+  
     border-color: #61dafb;
 }
-.tec-item-react:hover .tec { color: #61dafb; filter: drop-shadow(0 0 14px #61dafb); }
+.tec-item-react:hover .tec { color: #61dafb;  }
 
 .tec-item-ts:hover .tec-box-content {
-    box-shadow: 0 12px 30px rgba(49, 120, 198, 0.45), 0 0 20px rgba(49, 120, 198, 0.4);
+  
     border-color: #3178c6;
 }
-.tec-item-ts:hover .tec { color: #3178c6; filter: drop-shadow(0 0 12px #3178c6); }
+.tec-item-ts:hover .tec { color: #3178c6; }
 
 .tec-item-js:hover .tec-box-content {
-    box-shadow: 0 12px 30px rgba(247, 223, 30, 0.4), 0 0 20px rgba(247, 223, 30, 0.3);
+   
     border-color: #f7df1e;
 }
-.tec-item-js:hover .tec { color: #f7df1e; filter: drop-shadow(0 0 12px #f7df1e); }
+.tec-item-js:hover .tec { color: #f7df1e; }
 
 .tec-item-spring:hover .tec-box-content {
-    box-shadow: 0 12px 30px rgba(109, 179, 63, 0.45), 0 0 20px rgba(109, 179, 63, 0.35);
+  
     border-color: #6db33f;
 }
-.tec-item-spring:hover .tec { color: #6db33f; filter: drop-shadow(0 0 12px #6db33f); }
+.tec-item-spring:hover .tec { color: #6db33f;  }
 
 .tec-item-mysql:hover .tec-box-content {
-    box-shadow: 0 12px 30px rgba(0, 117, 143, 0.45), 0 0 20px rgba(242, 145, 17, 0.35);
+   
     border-color: #00758f;
 }
-.tec-item-mysql:hover .tec { color: #00758f; filter: drop-shadow(0 0 12px #00758f); }
+.tec-item-mysql:hover .tec { color: #00758f;}
 
 .tec-item-docker:hover .tec-box-content {
-    box-shadow: 0 12px 30px rgba(36, 150, 237, 0.45), 0 0 20px rgba(36, 150, 237, 0.4);
+   
     border-color: #2496ed;
 }
-.tec-item-docker:hover .tec { color: #2496ed; filter: drop-shadow(0 0 12px #2496ed); }
+.tec-item-docker:hover .tec { color: #2496ed; }
 
 .tec-item-git:hover .tec-box-content {
-    box-shadow: 0 12px 30px rgba(240, 80, 50, 0.45), 0 0 20px rgba(240, 80, 50, 0.35);
+  
     border-color: #f05032;
 }
-.tec-item-git:hover .tec { color: #f05032; filter: drop-shadow(0 0 12px #f05032); }
+.tec-item-git:hover .tec { color: #f05032;  }
 
 @media (max-width: 980px) {
     .tec-sec {

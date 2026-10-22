@@ -176,7 +176,7 @@ p {
   background: #8b5cff;
   border-color: rgba(255, 255, 255, 0.5);
   transform: translateY(-4px) scale(1.1);
-  box-shadow: 0 12px 30px rgba(113, 59, 246, 0.6), 0 0 28px rgba(139, 92, 255, 0.8);
+  
 }
 
 /* Scrollbar customization */
